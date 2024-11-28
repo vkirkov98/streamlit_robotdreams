@@ -34,7 +34,7 @@ def fetch_forecast(city):
 
 #Inicialize an SQLite database
 def log_search(city, temp, humidity, wind_speed):
-    conn = sqlite3.connect("homeworks/kirkovvalentiniván/8_streamlit/weather_log.db")
+    conn = sqlite3.connect("weather_log.db")
     cursor = conn.cursor()
     cursor.execute("""CREATE TABLE IF NOT EXISTS searches
               (city TEXT, temperature REAL, humidity REAL, wind_speed REAL, timestamp TEXT)""")
